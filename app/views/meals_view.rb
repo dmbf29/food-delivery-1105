@@ -3,8 +3,12 @@ class MealsView
   # creating of instances
   # only gets/puts
   def display(meals) # meals is an array of INSTANCES
-    meals.each_with_index do |meal, index|
-      puts "#{index + 1} - #{meal.name} ¥#{meal.price}"
+    if meals.any?
+      meals.each_with_index do |meal, index|
+        puts "#{index + 1} - #{meal.name} ¥#{meal.price}"
+      end
+    else
+      puts "No meals yet."
     end
   end
 
