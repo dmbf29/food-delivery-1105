@@ -1,1 +1,44 @@
-# TODO: implement the router of your app.
+class Router
+  def initialize(meals_controller, customers_controller)
+    # what do we need here? -> controllers
+    @meals_controller = meals_controller
+    @customers_controller = customers_controller
+    @running = true
+  end
+
+  def run
+    while @running
+      choice = display_menu
+      print `clear`
+      action(choice)
+    end
+  end
+
+  private
+
+  def display_menu
+    puts "------------------------------"
+    puts "------------ MENU ------------"
+    puts "------------------------------"
+    puts "What do you want to do"
+    puts "1 - Create a meal"
+    puts "2 - Show all meals"
+    puts "3 - Create a customer"
+    puts "4 - Show all customers"
+    puts "9 - Quit"
+    print "> "
+    gets.chomp.to_i
+  end
+
+  def action(choice)
+    case choice
+    when 1 then @meals_controller.add
+    when 2 then @meals_controller.list
+    when 3 then @customers_controller.add
+    when 4 then @customers_controller.list
+    when 9 then @running = false
+    else
+      puts "Try again..."
+    end
+  end
+end

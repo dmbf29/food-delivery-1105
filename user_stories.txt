@@ -1,0 +1,4 @@
+1.) √ As a user, I can add a new meal
+2.) As a user, I can list all the meals
+3.) As a user, I can add a new customer
+4.) As a user, I can list all the customers
