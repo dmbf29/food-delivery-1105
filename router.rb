@@ -61,7 +61,7 @@ class Router
     when 2 then @meals_controller.list
     when 3 then @customers_controller.add
     when 4 then @customers_controller.list
-    when 9 then @running = false
+    when 9 then quit
     when 0 then @employee = nil
     else
       puts "Try again..."
@@ -71,10 +71,15 @@ class Router
   def rider_action(choice)
     case choice
     # when 1 then @meals_controller.list
-    when 9 then @running = false
+    when 9 then quit
     when 0 then @employee = nil
     else
       puts "Try again..."
     end
+  end
+
+  def quit
+    @running = false
+    @employee = nil
   end
 end
