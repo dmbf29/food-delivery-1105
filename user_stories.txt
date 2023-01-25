@@ -1,4 +1,9 @@
-1.) √ As a user, I can add a new meal
-2.) As a user, I can list all the meals
-3.) As a user, I can add a new customer
-4.) As a user, I can list all the customers
+- [x] As a manager I can list all meals
+- [x] As a manager I can add a meal
+- [x] As a manager I can list all customers
+- [x] As a manager I can add a customer
+- [x] As a manager I can list undelivered orders
+- [x] As a manager I can add an order
+
+- [x] As a rider I can list my undelivered orders
+- [ ] As a rider I can mark an order as delivered
